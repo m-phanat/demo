@@ -43,6 +43,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
     }
 
     private fun signIn(email: String, password: String) {
+
+
         Log.d(TAG, "signIn:$email $password")
 
         // [START sign_in_with_email]
