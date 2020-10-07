@@ -2,8 +2,6 @@ package com.m.phanat.demo.view
 
 import android.content.Context
 import android.content.Intent
-import android.view.WindowInsets
-import android.view.WindowInsetsController
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
@@ -26,12 +24,8 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
         if (DarkModePrefManager(this).isNightMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
-        //function for enabling dark mode
-        //function for enabling dark mode
         setDarkModeSwitch()
-
-
-        window.statusBarColor = ContextCompat.getColor(this, R.color.contentBodyColor);// set status background white
+        window.statusBarColor = ContextCompat.getColor(this, R.color.contentBodyColor)
     }
 
     private fun setDarkModeSwitch() {

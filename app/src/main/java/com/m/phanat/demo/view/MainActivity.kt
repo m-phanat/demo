@@ -21,6 +21,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.logout.setOnClickListener {
             singOut()
         }
+        binding.setting.setOnClickListener {
+            startActivity(SettingActivity.getIntent(this))
+        }
     }
 
     private fun singOut() {

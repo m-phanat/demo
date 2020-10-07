@@ -7,6 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="HiddenTitleTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="statusBarBackground">@color/white</item>
+    </style>
+
 
     <style name="toast_default">
         <item name="stTextBold">true</item>

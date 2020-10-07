@@ -1,5 +1,9 @@
 package com.m.phanat.demo.base
 
-class BaseViewModel {
+import android.app.Application
+import android.content.Context
+import androidx.lifecycle.AndroidViewModel
+
+abstract class BaseViewModel(application: Application) : AndroidViewModel(application) {
 
 }

@@ -12,4 +12,6 @@
     <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
     <string name="login">Login</string>
     <string name="logout">logout</string>
+    <string name="setting">setting</string>
+    <string name="loadingType">loading..</string>
 </resources>

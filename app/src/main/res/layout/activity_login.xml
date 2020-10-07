@@ -13,7 +13,6 @@
         android:layout_gravity="center"
         android:elevation="5dp"
         app:cardBackgroundColor="@color/whiteCardColor"
-        app:cardCornerRadius="@dimen/loginCardRadius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +37,9 @@
                 style="@style/modifiedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/login_email_hint"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
+                android:text="@string/login_email_hint"
                 android:textSize="@dimen/small_text" />
 
 
@@ -49,9 +48,9 @@
                 style="@style/modifiedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/login_password_hint"
                 android:inputType="textPassword"
                 android:maxLines="1"
+                android:text="@string/login_password_hint"
                 android:textSize="@dimen/small_text" />
 
 
@@ -97,6 +96,5 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

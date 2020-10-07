@@ -44,6 +44,15 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:2.0.1"
     implementation "com.google.android.material:material:1.2.1"
 
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+
+    // Scale DP SDP
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
@@ -56,13 +65,9 @@ dependencies {
     // Multi Dex
     implementation "androidx.multidex:multidex:$multidex_version"
 
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    // EmptyView
+    implementation 'com.github.santalu:emptyview:1.3.6'
 
-    implementation 'com.google.firebase:firebase-auth:19.4.0'
-    
     // Annotation processor
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     // alternately - if using Java8, use the following instead of lifecycle-compiler
