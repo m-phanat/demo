@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">demo</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="example_email">email@example.com</string>
+    <string name="example_password">*********</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">test1@test.com</string>
+    <string name="login_password_hint">123456</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="login">Login</string>
+    <string name="logout">logout</string>
+</resources>
