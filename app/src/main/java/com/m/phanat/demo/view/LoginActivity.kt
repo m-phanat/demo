@@ -3,11 +3,12 @@ package com.m.phanat.demo.view
 import android.content.Context
 import android.content.Intent
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView.OnEditorActionListener
 import androidx.lifecycle.Observer
-import com.m.phanat.demo.ViewModel.LoginViewModel
+import com.m.phanat.demo.viewModel.LoginViewModel
 import com.m.phanat.demo.base.BaseActivity
 import com.m.phanat.demo.databinding.ActivityLoginBinding
+import com.m.phanat.demo.extension.hide
+import com.m.phanat.demo.extension.show
 import com.m.phanat.demo.extension.toast
 
 
@@ -37,7 +38,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
             } else {
                 toast("Authentication failed.")
             }
-//            binding.layoutContentContainer.showContent()
+            binding.loading.hide()
         })
     }
 
@@ -49,6 +50,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                     binding.editTextEmail.text.toString(),
                     binding.editTextPassword.text.toString()
                 )
+                binding.loading.show()
                 true
             } else false
         }
@@ -60,7 +62,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                 binding.editTextEmail.text.toString(),
                 binding.editTextPassword.text.toString()
             )
-//            binding.layoutContentContainer.showLoading()
+            binding.loading.show()
         }
     }
 

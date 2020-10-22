@@ -1,8 +1,22 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url 'https://maven.google.com' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.9'
+    }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
 apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 30
@@ -16,6 +30,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        manifestPlaceholders = [
+                onesignal_app_id: '25acfb9a-3a83-40e3-afc7-230ae7d77ceb',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
     }
 
     buildTypes {
@@ -27,6 +46,8 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+
 }
 
 dependencies {
@@ -41,7 +62,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
-    implementation "androidx.constraintlayout:constraintlayout:2.0.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.2"
     implementation "com.google.android.material:material:1.2.1"
 
     // ViewModel
@@ -81,5 +102,12 @@ dependencies {
     testImplementation "junit:junit:4.12"
     androidTestImplementation "androidx.test.ext:junit:1.1.2"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.3.0"
+
+    //Realm Annotations
+    kapt "io.realm:realm-annotations:6.0.0"
+    kapt "io.realm:realm-annotations-processor:6.0.0"
+
+    implementation 'com.onesignal:OneSignal:3.15.4'
+
 
 }
