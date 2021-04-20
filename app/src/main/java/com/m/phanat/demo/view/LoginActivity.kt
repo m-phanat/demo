@@ -3,9 +3,8 @@ package com.m.phanat.demo.view
 import android.content.Context
 import android.content.Intent
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView.OnEditorActionListener
 import androidx.lifecycle.Observer
-import com.m.phanat.demo.ViewModel.LoginViewModel
+import com.m.phanat.demo.viewModel.LoginViewModel
 import com.m.phanat.demo.base.BaseActivity
 import com.m.phanat.demo.databinding.ActivityLoginBinding
 import com.m.phanat.demo.extension.toast
