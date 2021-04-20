@@ -18,12 +18,28 @@ android {
         multiDexEnabled true
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     buildFeatures {
         viewBinding true
     }
@@ -57,10 +73,12 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
     // Custom Toast
-    implementation 'com.muddzdev:styleabletoast:2.2.4'
+    implementation 'com.muddzdev:styleabletoast:2.3.0'
 
     // Change Languages
-    implementation 'com.akexorcist:localization:1.2.6'
+    implementation ('com.akexorcist:localization:1.2.9') {
+        exclude group: 'androidx.core', module: 'core'
+    }
 
     // Multi Dex
     implementation "androidx.multidex:multidex:$multidex_version"
